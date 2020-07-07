@@ -1,0 +1,150 @@
+/* 
+
+GRID CSS
+
+display:grid             Elemento de bloque
+display:inline-grid      elemento de linea
+
+Se necetisa un contenedor (grid-container) y al menos un hijo (grid-item)
+
+Grid column: Es cada columna
+Grid row: Es cada fila
+Grid cell: Es cada celda
+Grid gap: Separacion entre celdas
+Grid line: Existen column lines y row lines, delimitan cada columna y fila 
+
+
+grid-template-columns:
+grid-template-rows:
+grid-column-gap: separacion entre columnas
+grid-row-gap: separacion entre filas
+
+
+Ordenar elementos con grid-column y grid-row
+
+grid-column-start: establace desde que column-line empezara el elemento
+grid-column-end: establece hasta que column-line llega el elemento
+grid-row-start: establace desde que row-line empezara el elemento
+grid-row-end: establece hasta que row-line llega el elemento
+
+Existe un shorthand que engloba las 2 propiedades
+grid-column: start / end
+grid-row : start /end
+
+span indica cuantas filas o columnas ocupará un elemento
+
+
+Medidas de la cuadricula
+
+Se pueden dar medeidas con cualquiera de las unidades que ya conocemos y dos más que vienen con grid, fr y auto
+    fr: Equvale a n fracciones del espacio disponible despues de establcer las medidas fijas
+    auto: Equivale al espacio que quede despues de repartir todos elementos, es el ultimo elemento que se reparte. Ekl tamaño mínimo del item será el espacio del contenido + el padding si lo tuviera
+
+funcion repeat()
+    Podemos establecer repeticiones de mediadas o patrones.
+    En el caso 'simple' recibiría 2 parámetros (valores):
+        repeat (nColumnas o nFilas, medida)
+        grid-template-columns :repeat (4,100px) es lo mismo que grid-template-columns: 100px 100px 100px 100px;
+    Si como segundo valor añanidmos más de una medida, contruiremos un patrón, no hay límites de valores.
+        grid-template-columns: repeat (2,100px 50 ....) es lo mismmo que grid-template-columns: 100px 50px 50px 100px; 
+
+
+Explicit grid: Es el grid que creamos
+Implicit grid: Es el grid que no creamos o declaramos
+Para manejar el implicit grid tenemos:
+    grid-auto-rows: medida 
+    grid-auto-columns:
+    grid-auto-flow: Establece la dirección en la cual se va a pintar el implicit grid.
+    Admite 3 valores:
+        row(default) : Se crean filas adicionales
+        column: Se crean columnas adicionales
+        dense: Establece que hacer con los huecos que quedan
+
+minmax():
+    Recibe dos parámetros para establecer el mínimo y el máximo que pueden tener los items.
+    grid-template-columsn: repeat (2, minmax(100px,1fr))
+
+    min-content: mínimo necesario en función del contenido
+    max-content: máximo necesario en función del contenido
+
+    auto-fill: Crea tantos grid-items vacios como quepan en el viewport respetando las medidas.
+    auto-fit: Elimina los grid-items vacios que no se estén ocupando
+
+Alineamiento:
+    justify-items: Alinea los elementos horizontalmente respecto a la celda
+
+    align-items: Alinea los elementos verticalmente respecto a la celda
+    Valores:
+        start:
+        center:
+        end:
+        strech: 
+    place-items: engloba justify-items y align-items
+
+    justify-content: Alinea los elementos horizontalmente respecto al contenedor
+    align-content: Alinea los elementos horizontalmente respecto al contenedor
+        start
+        end
+        center
+        space-evenly
+        space-between
+        space-around
+    place-content: Engloba justify-content y align-content
+
+    Para alinear items en concreto tenemos:
+    align-self: start, center, end, strech
+    justify-self: start, center, end, strech
+    place-self: Engloba a align-self y justify-self
+
+Orden:
+    Order: 
+    Todos los items por defecto tienen order 0
+
+Establecer el grid con nombres
+
+    grid-template-areas: 
+        "header header header"
+        "aside article article"
+        "footer footer footer"
+    grid-area: nombre del area
+
+Para nombrar las grid lines
+    grid-template-columns:
+        [first-column-line]
+        100px
+        [second-column-line]
+        100px
+        [third-column-line]
+        100px
+        [four-column-line]
+        100px
+        [last-column-line]
+        100px
+    grid-template-rows:
+        [first-row-line]
+        100px
+        [second-row-line]
+        100px
+        [third-row-line]
+        100px
+        [four-row-line]
+        100px
+        [last-row-line]
+        100px
+    
+    grid-column: second-column-line / third-column-line
+
+Shorthands
+    grid
+    grid-template: Engloba grid-template-columns, grid-template-rows y grid-template-areas
+       
+    
+
+
+
+
+
+
+
+
+*/

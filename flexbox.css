@@ -1,0 +1,70 @@
+/* 
+ 
+ FLEXBOX
+
+ display:flex; Elemento de bloque
+ display:inline-flex; Elemento de linea
+ 
+
+ contenedor -> flex-container
+ hijos -> flex-item
+
+ Existen dos ejes
+
+ main axis -> Eje principal      main start, main end
+ cross axis -> Eje secundario    cross start, cross end
+
+ */
+
+/* 
+ 
+flex-direction: row(default) |row-reverse | column | column-reverse
+Modifica la direccion y cual es el eje principal
+
+flex-wrap: no-wrap(default) | wrap | wrap-reverse
+Controla si los elementos saltarán de linea o no
+
+Shorthand -> flex-flow
+
+Alineamiento, se aplican al .flex-container
+
+Existen propiedades para el main-axis y el cross-axis
+
+main-axis:
+    justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end
+
+cross-axis:
+    align-items: Una sola linea
+        flex-start | center | flex-end | stretch(default) | baseline
+    align-content: varias lineas
+        flex-start | center | flex-end | stretch(default) | baseline
+    align-self: Se aplica al flex-item. Sirve para alinear un elemento en concreto en el cross-axis
+
+
+Propiedades de los item
+
+flex-grow: Establece que hacer ucando hay espacio sobrante. Cuantas divisiones coel el elemento. El valor es un entero desde 0 hasta n o auto
+
+flex-shrink: Establece que hacer cuando no hay espacio sugiciente. Cuantas divisiones pierde el elemento. El valor es un entero desde 0 hasta n.
+
+flex-basis: Establece cuando tiene que medir el elemento antes de repartir el espacio
+
+Order: Establece que orden ocupara el elemento en el contenedor flex.
+
+ */
+
+.flex-container {
+	background-color: #fca17d;
+	padding: 0.5em 0;
+	display: flex;
+}
+
+.flex-item {
+	width: 30px;
+	height: 30px;
+	margin: 0.5em;
+	line-height: 30px;
+	color: aliceblue;
+	text-align: center;
+	background-color: #9a348e;
+}

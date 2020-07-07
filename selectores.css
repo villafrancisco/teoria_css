@@ -1,0 +1,165 @@
+/* Selector de etiqueta
+h1 {
+	color: red;
+}
+
+Selectores de clase
+
+.title {
+	color: green;
+}
+
+.text {
+	color: blue;
+}
+
+Selectores id
+
+#title {
+	color: aqua;
+}
+#text {
+	color: blueviolet;
+}
+
+Selectores universales
+
+* {
+	color: red;
+}
+
+Selectores de atributo
+
+[href] {
+	color: green;
+}
+
+[href='*'] {
+	color: green;
+}
+Selecciona los elementos que tienen ese atributo al menos ese valor una vez
+[href~='verde'] {
+	color: green;
+}
+
+Selecciona los elementos que tienen ese atributo y exactamente ese valor o empieze por el valor seguido de un guión
+[href|='verde'] {
+	color: green;
+}
+
+Selecciona los elementos que tienen ese atributo y empiezan por ese valor
+[class^='verde'] {
+	color: green;
+}
+
+Selecciona los elementos que tienen ese atributo y acaban por ese valor
+[class$='verde'] {
+	color: green;
+}
+
+Selecciona los elementos que tienen ese atributo y que contengan ese valor
+[class*='verde'] {
+	color: green;
+}
+
+Selectores combinadores
+
+Selector hermano adyacente
+h1 + h2 {
+	color: red;
+}
+
+Selector de hermano general
+h1 ~ h3 {
+	color: green;
+}
+
+Selectores descendentes
+p span {
+	color: red;
+}
+
+Selector hijo directo
+p > span {
+	color: blue;
+}
+
+Pseudoelementos
+
+.title::first-letter {
+	color: rebeccapurple;
+}
+
+.title::first-line {
+	color: rebeccapurple;
+}
+
+.title::before {
+	content: ' ';
+	color: rebeccapurple;
+}
+
+.title::after {
+	content: ' ';
+	color: rebeccapurple;
+}
+
+Pseudoclases
+
+
+:link
+:visited
+:hover 
+:active
+:focus
+
+:target
+
+:lang
+
+:enabled
+:disabled
+:checked
+:in-range
+:out-of-range
+:required
+:optional
+:valid
+:invalid
+
+:root
+
+:empty
+
+:first-child
+:last-child
+:nth-child(n)      odd, even,
+:nth-last-child(n)
+:only-child  
+
+ :first-of-type
+ :last-of-type
+ :nth-of-type(n)
+ :nth-last-of-type(n)
+ :only-of-type
+
+
+
+Variables Css
+
+:root {
+	--color: red;
+}
+
+.paragraph {
+	color: var(--color);
+}
+
+Propiedades de las imagenes
+
+img {
+	object-fit: contain;
+	object-position: center;
+	filter: none;
+	clip-path: none;
+} */
